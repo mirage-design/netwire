@@ -5,8 +5,12 @@ import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import type { ISourceOptions } from "@tsparticles/engine";
 import { loadAll } from "@tsparticles/all";
+import NavBullets from "./components/NavBullets";
+import { Flex } from "@chakra-ui/react";
+import Hero from "./components/Hero";
 
 function App() {
+  //Particles config
   const [init, setInit] = useState(false);
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -91,21 +95,37 @@ function App() {
     return (
       <>
         <Particles id="tsparticles" options={options} />
+
         <Box style={{ zIndex: 2, position: "relative" }}>
-          <FullPage>
-            <Slide>
+          <FullPage
+            controls={({
+              getCurrentSlideIndex,
+              slidesCount,
+              scrollToSlide,
+            }) => (
+              //Navigation Bullets
               <Box
-                p={2}
-                h="100vh"
-                w="100vw"
+                style={{ zIndex: 3, position: "fixed" }}
+                width="auto"
+                height="100vh"
+                padding={4}
                 display="flex"
                 alignItems="center"
-                justifyContent="center"
               >
-                <Heading as="h1" size="4xl" color="#fff">
-                  GOJO LOVER 911
-                </Heading>
+                <Flex gap="2" direction="column" w="24px">
+                  {[...Array(slidesCount).keys()].map((_, index) => (
+                    <NavBullets
+                      key={index}
+                      active={index === getCurrentSlideIndex()}
+                      onClick={() => scrollToSlide(index)}
+                    />
+                  ))}
+                </Flex>
               </Box>
+            )}
+          >
+            <Slide>
+              <Hero />
             </Slide>
             <Slide>
               <Box
@@ -117,7 +137,7 @@ function App() {
                 justifyContent="center"
               >
                 <Heading as="h1" size="4xl" color="#fff">
-                  Teste
+                  Second Slide
                 </Heading>
               </Box>
             </Slide>

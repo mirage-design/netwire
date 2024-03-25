@@ -8,6 +8,7 @@ import { loadAll } from "@tsparticles/all";
 import NavBullets from "./components/NavBullets";
 import { Flex } from "@chakra-ui/react";
 import Hero from "./components/Hero";
+import About from "./components/About";
 
 function App() {
   //Particles config
@@ -128,16 +129,55 @@ function App() {
               <Hero />
             </Slide>
             <Slide>
+              <About />
+            </Slide>
+            <Slide>
               <Box
-                p={2}
+                pl="56px"
+                py={10}
+                pr={4}
                 h="100vh"
                 w="100vw"
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
+                background="linear-gradient(345deg, rgba(255,115,0,0.2) 0%, rgba(0,0,0,0) 40%)"
               >
-                <Heading as="h1" size="4xl" color="#fff">
-                  Second Slide
+                <Heading
+                  size="3xl"
+                  lineHeight="72px"
+                  color="#fff"
+                  fontFamily="heading"
+                  fontWeight="700"
+                  textAlign="center"
+                  maxWidth="1000px"
+                >
+                  Another One
+                </Heading>
+              </Box>
+            </Slide>
+            <Slide>
+              <Box
+                pl="56px"
+                py={10}
+                pr={4}
+                h="100vh"
+                w="100vw"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                background="linear-gradient(345deg, rgba(255,115,0,0.2) 0%, rgba(0,0,0,0) 40%)"
+              >
+                <Heading
+                  size="3xl"
+                  lineHeight="72px"
+                  color="#fff"
+                  fontFamily="heading"
+                  fontWeight="700"
+                  textAlign="center"
+                  maxWidth="1000px"
+                >
+                  Another One
                 </Heading>
               </Box>
             </Slide>

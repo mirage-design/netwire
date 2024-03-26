@@ -1,3 +1,5 @@
+"use client";
+
 import { Box } from "@chakra-ui/layout";
 import { Heading } from "@chakra-ui/react";
 import { FullPage, Slide } from "react-full-page";
@@ -5,12 +7,12 @@ import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import type { ISourceOptions } from "@tsparticles/engine";
 import { loadAll } from "@tsparticles/all";
-import NavBullets from "./components/NavBullets";
+import NavBullets from "../components/NavBullets";
 import { Flex } from "@chakra-ui/react";
-import Hero from "./components/Hero";
-import About from "./components/About";
+import Hero from "../components/Hero";
+import About from "../components/About";
 
-function App() {
+function page() {
   //Particles config
   const [init, setInit] = useState(false);
   useEffect(() => {
@@ -141,7 +143,7 @@ function App() {
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
-                background="linear-gradient(345deg, rgba(255,115,0,0.2) 0%, rgba(0,0,0,0) 40%)"
+                background="linear-gradient(190deg, rgba(255,115,0,0.2) 0%, rgba(0,0,0,0) 40%)"
               >
                 <Heading
                   size="3xl"
@@ -189,4 +191,4 @@ function App() {
   return <></>;
 }
 
-export default App;
+export default page;

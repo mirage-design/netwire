@@ -1,6 +1,6 @@
 import { Box, VStack } from "@chakra-ui/layout";
 import { Heading, Text } from "@chakra-ui/react";
-import { Image } from "@chakra-ui/react";
+import Image from "next/image";
 import LogoWhite from "../assets/imgs/logo_netwire_white.png";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
@@ -27,7 +27,7 @@ export default function Hero() {
         <Image
           src={LogoWhite}
           alt="Logo Netwire"
-          maxW="160px"
+          width={160}
           objectFit="contain"
         />
         <VStack spacing={10} justifyContent="center">

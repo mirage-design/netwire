@@ -14,6 +14,7 @@ import Clients from "@/components/Clients";
 import Pains from "@/components/Pains";
 import { Stack } from "@chakra-ui/layout";
 import { Heading } from "@chakra-ui/react";
+import Differentials from "@/components/Differentials";
 
 function page() {
   //Particles config
@@ -143,37 +144,7 @@ function page() {
               <Pains />
             </Slide>
             <Slide>
-              <Box
-                pl="56px"
-                py={10}
-                pr={4}
-                h="100vh"
-                w="100vw"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                background="linear-gradient(190deg, rgba(255,115,0,0.2) 0%, rgba(0,0,0,0) 40%)"
-              >
-                <Stack
-                  maxW="1200px"
-                  direction="column"
-                  shouldWrapChildren={true}
-                  justifyContent="space-between"
-                  alignItems="center"
-                  spacing={20}
-                >
-                  <Heading
-                    size="xl"
-                    color="#fff"
-                    maxW="1120px"
-                    fontFamily="heading"
-                    lineHeight="48px"
-                    textAlign="center"
-                  >
-                    Diferenciais dos treinamentos Netwire
-                  </Heading>
-                </Stack>
-              </Box>
+              <Differentials />
             </Slide>
             <Slide>
               <Box

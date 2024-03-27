@@ -15,6 +15,7 @@ export default function Pains() {
       display="flex"
       alignItems="center"
       justifyContent="center"
+      background="radial-gradient(circle, rgba(255,115,0,0.15) 0%, rgba(0,0,0,0) 60%)"
     >
       <Stack
         maxW="1120px"

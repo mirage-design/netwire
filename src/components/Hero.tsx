@@ -27,8 +27,8 @@ export default function Hero() {
         <Image
           src={LogoWhite}
           alt="Logo Netwire"
-          width={160}
-          objectFit="contain"
+          width={140}
+          style={{ objectFit: "contain" }}
         />
         <VStack spacing={10} justifyContent="center">
           <Heading

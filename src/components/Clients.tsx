@@ -41,9 +41,9 @@ export default function Clients() {
           Alguns de nossos clientes
         </Heading>
         <Flex
-          gap={6}
+          gap={8}
           direction="row"
-          maxW="1200px"
+          maxW="1120px"
           flexWrap="wrap"
           justify="center"
         >

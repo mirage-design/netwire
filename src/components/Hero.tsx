@@ -39,7 +39,7 @@ export default function Hero() {
             fontFamily="heading"
             fontWeight="300"
             textAlign="center"
-            maxWidth="1000px"
+            maxWidth="1120px"
           >
             A SOLUÇÃO CERTA PARA SUA <br />
             <strong>COMUNICAÇÃO CORPORATIVA</strong>
@@ -52,7 +52,7 @@ export default function Hero() {
               color="#fff"
               fontFamily="body"
               fontWeight="400"
-              maxWidth="1000px"
+              maxWidth="1120px"
             >
               Excellence delivering global corporate content
             </Text>
@@ -63,7 +63,7 @@ export default function Hero() {
               color="#fff"
               fontFamily="body"
               fontWeight="500"
-              maxWidth="1000px"
+              maxWidth="1120px"
             >
               E-Learning | Content Creation | Translation
             </Text>

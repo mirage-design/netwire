@@ -1,6 +1,7 @@
 "use client";
 
-import { Box } from "@chakra-ui/layout";
+import { Box, Stack, VStack } from "@chakra-ui/layout";
+import { Text } from "@chakra-ui/react";
 import { Heading } from "@chakra-ui/react";
 import { FullPage, Slide } from "react-full-page";
 import { useEffect, useMemo, useState } from "react";
@@ -11,6 +12,8 @@ import NavBullets from "../components/NavBullets";
 import { Flex } from "@chakra-ui/react";
 import Hero from "../components/Hero";
 import About from "../components/About";
+import { CloseIcon } from "@chakra-ui/icons";
+import Clients from "@/components/Clients";
 
 function page() {
   //Particles config
@@ -134,29 +137,7 @@ function page() {
               <About />
             </Slide>
             <Slide>
-              <Box
-                pl="56px"
-                py={10}
-                pr={4}
-                h="100vh"
-                w="100vw"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                background="linear-gradient(190deg, rgba(255,115,0,0.2) 0%, rgba(0,0,0,0) 40%)"
-              >
-                <Heading
-                  size="3xl"
-                  lineHeight="72px"
-                  color="#fff"
-                  fontFamily="heading"
-                  fontWeight="700"
-                  textAlign="center"
-                  maxWidth="1000px"
-                >
-                  Another One
-                </Heading>
-              </Box>
+              <Clients />
             </Slide>
             <Slide>
               <Box
@@ -170,17 +151,46 @@ function page() {
                 justifyContent="center"
                 background="linear-gradient(345deg, rgba(255,115,0,0.2) 0%, rgba(0,0,0,0) 40%)"
               >
-                <Heading
-                  size="3xl"
-                  lineHeight="72px"
-                  color="#fff"
-                  fontFamily="heading"
-                  fontWeight="700"
-                  textAlign="center"
-                  maxWidth="1000px"
+                <Stack
+                  maxW="1120px"
+                  direction="column"
+                  shouldWrapChildren={true}
+                  justifyContent="space-between"
+                  alignItems="center"
+                  spacing={12}
                 >
-                  Another One
-                </Heading>
+                  <Heading
+                    size="xl"
+                    color="#fff"
+                    maxW="1120px"
+                    fontFamily="heading"
+                    lineHeight="48px"
+                    textAlign="center"
+                  >
+                    Dores que identificamos
+                  </Heading>
+                  <VStack
+                    gap={6}
+                    maxW="832px"
+                    border="1px"
+                    borderColor="#515151"
+                    borderRadius={8}
+                    p={10}
+                  >
+                    <Flex w="100%" gap={4} direction="row" alignItems="center">
+                      <CloseIcon w={4} h={4} color="#C9C9C9" />
+                      <Text
+                        fontSize="xl"
+                        color="#C9C9C9"
+                        w="full"
+                        fontWeight="400"
+                        lineHeight="32px"
+                      >
+                        Treinamentos sem dinamismo/Pouca interatividade
+                      </Text>
+                    </Flex>
+                  </VStack>
+                </Stack>
               </Box>
             </Slide>
           </FullPage>
